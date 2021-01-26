@@ -1,10 +1,17 @@
 # Python Program to invert a given number
 num = int(input("Enter number to be inversed: "))
-placeVal = 1
+num2 = num
+
+# counting number of digits in the input number
+n = 0
+while num2 > 0:
+    num2 //= 10
+    n += 1
+curr = n
 res = 0
 while num > 0:
     digit = num % 10
-    res += placeVal * pow(10, digit - 1)
+    res += curr * pow(10, n - digit)
     num //= 10
-    placeVal += 1
+    curr -= 1
 print("Inverse: ", res)
