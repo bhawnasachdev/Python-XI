@@ -8,6 +8,8 @@ while num2 > 0:
     num2 //= 10
     n += 1
 curr = n
+
+# creating inverse of number
 res = 0
 while num > 0:
     digit = num % 10
